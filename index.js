@@ -1,3 +1,3 @@
-import ChariotTheme, {ChariotTooltip} from "src/ChariotTheme.js"
+import ChariotTheme, {ChariotTooltip} from "./src/ChariotTheme.js"
 
 export {ChariotTheme, ChariotTooltip}

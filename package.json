@@ -1,0 +1,24 @@
+{
+  "name": "chariot-quill-theme",
+  "version": "0.1.0",
+  "description": "Quill Theme for Chariot",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Profiiot/chariot-quill-theme.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "quill": "^1.2.4",
+    "extend": "~3.0.0"
+  },
+  "files": [
+    "assets",
+    "src",
+    "index.js"
+  ]
+}

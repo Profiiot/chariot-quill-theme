@@ -95,6 +95,7 @@ class ChariotTooltip extends BaseTooltip {
 
   position(reference) {
     let shift = super.position(reference);
+    this.root.style.left = null;
     let arrow = this.root.querySelector('.ql-tooltip-arrow');
     arrow.style.marginLeft = '';
     if (shift === 0) return shift;

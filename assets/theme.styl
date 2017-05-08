@@ -1,11 +1,11 @@
 themeName = 'chariot'
 activeColor = #fff
 borderColor = #777
-backgroundColor = #444
+backgroundColor = #aaa
 inactiveColor = #ccc
 shadowColor = #ddd
 textColor = #fff
-arrowWidth = 6px
+arrowWidth = 30px
 
 @import '~quill/assets/core'
 @import '~quill/assets/base'
@@ -15,32 +15,32 @@ arrowWidth = 6px
     position: relative
     white-space: nowrap
   a::before
-      background-color: #444
-      border-radius: 15px
-      top: -5px
-      font-size: 12px
-      color: #fff
-      content: attr(href)
-      font-weight: normal
-      overflow: hidden
-      padding: 5px 15px
-      text-decoration: none
-      z-index: 1
+    background-color: #444
+    border-radius: 15px
+    top: -5px
+    font-size: 12px
+    color: #fff
+    content: attr(href)
+    font-weight: normal
+    overflow: hidden
+    padding: 5px 15px
+    text-decoration: none
+    z-index: 1
   a::after
-      border-top: 6px solid #444
-      border-left: 6px solid transparent
-      border-right: 6px solid transparent
-      top: 0
-      content: " "
-      height: 0
-      width: 0
+    border-top: 6px solid #444
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    top: 0
+    content: " "
+    height: 0
+    width: 0
   a::before, a::after
-      left: 0
-      margin-left: 50%
-      position: absolute
-      transform: translate(-50%, -100%)
-      transition: visibility 0s ease 200ms
-      visibility: hidden
+    left: 0
+    margin-left: 50%
+    position: absolute
+    transform: translate(-50%, -100%)
+    transition: visibility 0s ease 200ms
+    visibility: hidden
   a:hover::before, a:hover::after
     visibility: visible
 
@@ -51,21 +51,27 @@ arrowWidth = 6px
   .ql-tooltip
     background-color: backgroundColor
     border-radius: 25px
-    color: textColor
+    border-bottom-left-radius 0
+    border-top-left-radius  0
+    color textColor
+    right -100px
+    max-width 100px
+    z-index 999
+    top: 150px
   .ql-tooltip-arrow
-    border-left: arrowWidth solid transparent
-    border-right: arrowWidth solid transparent
+    border-top: arrowWidth solid transparent
+    border-bottom: arrowWidth solid transparent
     content: " "
     display: block
-    left: 50%
-    margin-left: -1 * arrowWidth
+    top: 50%
+    margin-top: -1 * arrowWidth
     position: absolute
   .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow
     border-bottom: arrowWidth solid backgroundColor
     top: -1 * arrowWidth
   .ql-tooltip.ql-flip .ql-tooltip-arrow
-    border-top: arrowWidth solid backgroundColor
-    bottom: -1 * arrowWidth
+    border-right: arrowWidth solid backgroundColor
+    left: -1 * arrowWidth
 
   .ql-tooltip.ql-editing
     .ql-tooltip-editor

@@ -96,6 +96,11 @@ class ChariotTooltip extends BaseTooltip {
   position(reference) {
     let shift = super.position(reference);
     this.root.style.left = null;
+    // adjusting the tip of the toolbar to the word's position
+    let topSliced = this.root.style.top.slice(0, -2);
+    let topVal = parseInt(topSliced) + 48;
+    this.root.style.top = topVal +'px';
+
     let arrow = this.root.querySelector('.ql-tooltip-arrow');
     arrow.style.marginLeft = '';
     if (shift === 0) return shift;
